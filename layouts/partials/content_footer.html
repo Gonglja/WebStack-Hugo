@@ -3,16 +3,16 @@
                 <a href="javascript:" id="go-to-up" class="btn rounded-circle go-up m-1" rel="go-top">
                     <i class="iconfont icon-to-up"></i>
                 </a>
-               
+                {{ if $.Site.Params.nightMode }}        
                 <a href="javascript:" onclick="window.location.href='javascript:switchNightMode()'" class="btn rounded-circle switch-dark-mode m-1" id="yejian"
                     data-toggle="tooltip" data-placement="left" title="夜间模式">
                     <i class="mode-ico iconfont icon-light"></i>
                 </a>
-		{{ else }}
-		<a href="javascript:" onclick="window.location.href='javascript:switchNightMode()'" class="btn rounded-circle switch-dark-mode m-1" id="yejian"
-                    data-toggle="tooltip" data-placement="left" title="日间模式">
-                    <i class="mode-ico iconfont icon-night"></i>
-                </a>
+                {{ else }}
+                <a href="javascript:" onclick="window.location.href='javascript:switchNightMode()'" class="btn rounded-circle switch-dark-mode m-1" id="yejian"
+                            data-toggle="tooltip" data-placement="left" title="日间模式">
+                            <i class="mode-ico iconfont icon-night"></i>
+                        </a>
                 {{ end }}
             </div>
             <div class="footer-inner">
